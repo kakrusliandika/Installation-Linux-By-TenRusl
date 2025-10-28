@@ -1,5 +1,6 @@
 // scaffold.js
 // Buat struktur folder & file kosong untuk Installation-Linux-By-TenRusl
+// + README.md di setiap folder
 // Author: TenRusli x ChatGPT
 
 const fs = require("fs");
@@ -62,16 +63,23 @@ const vscodeFiles = ["settings.json", "extensions.json", "launch.json", "tasks.j
 
 // === Util ===
 function ensureDir(d) {
-  if (!fs.existsSync(d)) {
-    fs.mkdirSync(d, { recursive: true });
-  }
+    if (!fs.existsSync(d)) {
+        fs.mkdirSync(d, { recursive: true });
+    }
+    ensureReadme(d); // tambahkan README.md di setiap folder
 }
 
 function ensureFile(f) {
   if (!fs.existsSync(f)) {
-    // buat file kosong
-    fs.writeFileSync(f, "");
+      fs.writeFileSync(f, "");
   }
+}
+
+function ensureReadme(dirPath) {
+    const readmePath = path.join(dirPath, "README.md");
+    if (!fs.existsSync(readmePath)) {
+        fs.writeFileSync(readmePath, "");
+    }
 }
 
 function createPlatformTree(platform, ext) {
@@ -117,5 +125,5 @@ function createPlatformTree(platform, ext) {
     createPlatformTree(platform, ext);
   }
 
-  console.log("✅ Struktur berhasil dibuat/di-update tanpa menimpa yang sudah ada.");
+  console.log("✅ Struktur & README.md per-folder berhasil dibuat/di-update (idempotent).");
 })();
