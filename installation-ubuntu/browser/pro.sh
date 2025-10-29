@@ -24,6 +24,7 @@ apt_install() {
   done
 }
 
+
 ensure_whiptail() { command -v whiptail >/dev/null 2>&1 || apt_install whiptail dialog || true; }
 
 ensure_flatpak() {

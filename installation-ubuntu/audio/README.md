@@ -100,6 +100,7 @@ qjackctl &
 
 ---
 
+
 ## ⚠️ Catatan Legal
 
 Beberapa codec/plugin (terutama GStreamer **ugly**) mungkin terikat lisensi/paten di wilayah tertentu. Instalasi mengikuti kebijakan repositori Ubuntu/KXStudio. Tinjau kebutuhan & legalitas Anda.

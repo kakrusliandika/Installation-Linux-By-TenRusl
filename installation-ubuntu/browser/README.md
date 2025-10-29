@@ -86,6 +86,7 @@ snap list firefox chromium opera || true
 
 ---
 
+
 ## ⚠️ Catatan Legal
 Peramban membawa lisensi masing‑masing. Pemasangan lewat repo resmi menjaga update keamanan dan integritas paket. Gunakan sesuai kebijakan organisasi Anda.
 

@@ -10,9 +10,9 @@ LOG="${LOG:-$HOME/ubuntu-audio-basic.log}"
 export DEBIAN_FRONTEND=noninteractive
 FAILED=()
 
-log()  { printf "[*] %s\n" "$*" | tee -a "$LOG"; }
-ok()   { printf "[✓] %s\n" "$*" | tee -a "$LOG"; }
-warn() { printf "[!] %s\n" "$*" | tee -a "$LOG"; }
+log()  { printf "🔧 %s\n" "$*" | tee -a "$LOG"; }
+ok()   { printf "✅ %s\n" "$*" | tee -a "$LOG"; }
+warn() { printf "⚠️ %s\n" "$*" | tee -a "$LOG"; }
 
 apt_update_once() {
   $SUDO apt-get update -y >>"$LOG" 2>&1 || true
@@ -87,6 +87,7 @@ install_selected() {
     apt_install audacity
   fi
 }
+
 
 summary() {
   echo
