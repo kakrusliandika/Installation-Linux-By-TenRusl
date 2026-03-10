@@ -1,0 +1,14 @@
+# Logs
+*.log
+
+# Runtime artifacts
+*.tmp
+*.swp
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
