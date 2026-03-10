@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "ShellCheck current repo",
+      "type": "shell",
+      "command": "find . -name '*.sh' -print0 | xargs -0 -r shellcheck",
+      "problemMatcher": []
+    }
+  ]
+}
